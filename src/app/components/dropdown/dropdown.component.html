@@ -1,0 +1,19 @@
+<div class="dropdown" (click)="click()">
+    <p>{{placeholder}}</p>
+    <span
+        class="material-symbols-outlined"
+        [style]="{'transform': opening ? 'rotate(180deg)' : 'rotate(0deg)'}"
+        >
+        expand_more
+    </span>
+    @if (opening) {
+        <div class="open">
+            <ul>
+                <li class="default" (click)="clickDefault($event)">{{placeholder}}</li>
+                @for (item of options; track $index) {
+                    <li (click)="clickOptions(item)">{{item.label}}</li>
+                }
+            </ul>
+        </div>
+    }
+</div>

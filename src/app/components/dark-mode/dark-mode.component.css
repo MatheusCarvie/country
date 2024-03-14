@@ -1,0 +1,52 @@
+.dark-mode {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.dark-mode .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.dark-mode .line p {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--fontFamily);
+    color: var(--thirdColor);
+}
+
+
+.dark-mode .line span {
+    font-size: 28px;
+    font-weight: 100;
+    color: var(--thirdColor);
+}
+
+.dark-mode:hover .line {
+    transform: scale(0.9);
+}
+
+@media (max-width: 600px) {
+    .dark-mode .line p {
+        font-size: 14px;
+    }
+
+    .dark-mode .line span {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .dark-mode .line {
+        gap: 5px;
+    }
+    
+    .dark-mode .line span {
+        font-size: 20px;
+    }
+}

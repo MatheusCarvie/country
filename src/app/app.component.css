@@ -1,0 +1,99 @@
+#app-body {
+    width: 100%;
+    height: auto;
+}
+
+#app-body main {
+    width: 100%;
+    padding: 50px 150px 50px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+#app-body main .form{
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app-body main .form > :first-child {
+    width: 480px;
+}
+
+#app-body main .list-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#app-body main .list-card #loading {
+    font-size: 50px;
+    color: var(--thirdColor);
+    animation: loading 1s infinite ease;
+}
+
+#app-body main .list-card #not {
+    font-size: 20px;
+    font-family: var(--fontFamily);
+    color: var(--thirdColor);
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1400px){
+    #app-body main {
+        padding: 50px 100px 50px 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #app-body main .form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        width: auto;
+        margin-right: auto;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    #app-body main .form > :first-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    #app-body main {
+        padding: 50px
+    }
+}
+
+@media (max-width: 600px) {
+    #app-body main {
+        padding: 30px 20px 30px 20px
+    }
+}
+
+@media (max-width: 350px) {
+    #app-body main {
+        padding: 30px 10px 30px 10px
+    }
+}

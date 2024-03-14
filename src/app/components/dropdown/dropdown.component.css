@@ -1,0 +1,70 @@
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    background-color: var(--primaryColor);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown p {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: var(--fontFamily);
+    color: var(--thirdColor);
+}
+
+.dropdown span {
+    transition: transform 0.1s ease;
+    color: var(--thirdColor);
+}
+
+.dropdown:active span {
+    transform: rotate(180deg);
+}
+
+.dropdown .open {
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+    border-radius: 5px;
+    background-color: var(--primaryColor);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown .open ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.dropdown .open ul li {
+    list-style: none;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: var(--fontFamily);
+    padding: 5px 20px
+}
+
+.dropdown .open ul .default{
+    color: grey;
+}
+
+.dropdown .open ul li:not(.default):hover {
+    color: var(--primaryColor);
+    background-color: var(--fourthColor);
+}

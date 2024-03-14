@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+    appearance: none;
+    border: none;
+    user-select: none;
+}
+
+:root {
+    --primaryColor: #FFFFFF;
+    --secondaryColor: #FAFAFA;
+    --thirdColor: #000000;
+    --fourthColor: #7F7F7F;
+    --fontFamily:  "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--secondaryColor);
+}
+
+span {
+    translate: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: var(--primaryColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--fourthColor);
+}
